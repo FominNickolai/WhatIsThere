@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import MapKit
 
 class MapVC: UIViewController {
+
+    //MARK: - IBOutlets
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    //MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +24,19 @@ class MapVC: UIViewController {
         
     }
 
-
+    //MARK: - IBActions
+    
+    @IBAction func centerMapButtonWasPressed(_ sender: UIButton) {
+        
+        
+    }
+    
 }
+
+//MARK: - MKMapViewDelegate
+extension MapVC: MKMapViewDelegate {
+    
+}
+
+
 
