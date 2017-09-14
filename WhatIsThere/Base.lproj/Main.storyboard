@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
@@ -23,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-Sb-I38">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-Sb-I38">
                                 <rect key="frame" x="0.0" y="70" width="375" height="596"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="y8O-0o-4PN"/>
@@ -92,6 +93,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-794.39999999999998" y="100.29985007496252"/>
+        </scene>
+        <!--PopVC-->
+        <scene sceneID="CBy-gN-yrd">
+            <objects>
+                <viewController storyboardIdentifier="PopVC" id="RMn-3B-fna" customClass="PopVC" customModule="WhatIsThere" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QMb-JT-LYx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-17-wQY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SW4-aS-ghw">
+                                <rect key="frame" x="97.5" y="622" width="180" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double tap to dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-7o-N2x">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="L3w-7o-N2x" secondAttribute="bottom" id="Er9-Ds-Js1"/>
+                                    <constraint firstItem="L3w-7o-N2x" firstAttribute="leading" secondItem="SW4-aS-ghw" secondAttribute="leading" id="QFJ-XC-e16"/>
+                                    <constraint firstItem="L3w-7o-N2x" firstAttribute="top" secondItem="SW4-aS-ghw" secondAttribute="top" id="Rz8-Eg-1gs"/>
+                                    <constraint firstAttribute="width" constant="180" id="UpT-kE-V8M"/>
+                                    <constraint firstAttribute="trailing" secondItem="L3w-7o-N2x" secondAttribute="trailing" id="fyo-Q4-jEB"/>
+                                    <constraint firstAttribute="height" constant="25" id="m8I-In-Ter"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3wT-Fk-vha" firstAttribute="bottom" secondItem="SW4-aS-ghw" secondAttribute="bottom" constant="20" id="2oG-5O-RzI"/>
+                            <constraint firstItem="3ia-17-wQY" firstAttribute="leading" secondItem="3wT-Fk-vha" secondAttribute="leading" id="Nut-WR-gLy"/>
+                            <constraint firstItem="3ia-17-wQY" firstAttribute="top" secondItem="QMb-JT-LYx" secondAttribute="top" id="Vh2-lr-8fp"/>
+                            <constraint firstItem="SW4-aS-ghw" firstAttribute="centerX" secondItem="QMb-JT-LYx" secondAttribute="centerX" id="aGK-Cd-EZg"/>
+                            <constraint firstItem="3ia-17-wQY" firstAttribute="bottom" secondItem="3wT-Fk-vha" secondAttribute="bottom" id="eXV-XS-Bf8"/>
+                            <constraint firstItem="3ia-17-wQY" firstAttribute="trailing" secondItem="3wT-Fk-vha" secondAttribute="trailing" id="lD3-8i-S5R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3wT-Fk-vha"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="3ia-17-wQY" id="kXd-ex-nf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6me-TP-MN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="100.29985007496252"/>
         </scene>
     </scenes>
     <resources>
