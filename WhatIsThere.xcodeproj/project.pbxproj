@@ -15,6 +15,8 @@
 		B78F9A7F1F69B98600F4FEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78F9A7D1F69B98600F4FEA9 /* LaunchScreen.storyboard */; };
 		B78F9A8D1F6A476900F4FEA9 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78F9A8C1F6A476900F4FEA9 /* DroppablePin.swift */; };
 		B78F9A8F1F6A91D400F4FEA9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78F9A8E1F6A91D400F4FEA9 /* PhotoCell.swift */; };
+		B78F9A911F6A97C500F4FEA9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78F9A901F6A97C500F4FEA9 /* Constants.swift */; };
+		B78F9A931F6A9AB000F4FEA9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78F9A921F6A9AB000F4FEA9 /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		B78F9A801F69B98600F4FEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B78F9A8C1F6A476900F4FEA9 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		B78F9A8E1F6A91D400F4FEA9 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		B78F9A901F6A97C500F4FEA9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B78F9A921F6A9AB000F4FEA9 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		FE167A5CBB6B5871AF974DF6 /* Pods-WhatIsThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatIsThere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatIsThere/Pods-WhatIsThere.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,8 @@
 		B78F9A8B1F69BA2300F4FEA9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B78F9A901F6A97C500F4FEA9 /* Constants.swift */,
+				B78F9A921F6A9AB000F4FEA9 /* Services.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78F9A911F6A97C500F4FEA9 /* Constants.swift in Sources */,
+				B78F9A931F6A9AB000F4FEA9 /* Services.swift in Sources */,
 				B78F9A8F1F6A91D400F4FEA9 /* PhotoCell.swift in Sources */,
 				B78F9A771F69B98600F4FEA9 /* MapVC.swift in Sources */,
 				B78F9A8D1F6A476900F4FEA9 /* DroppablePin.swift in Sources */,
