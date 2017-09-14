@@ -27,6 +27,9 @@ class MapVC: UIViewController {
     var spinner: UIActivityIndicatorView?
     var progressLbl: UILabel?
     
+    var collectionView: UICollectionView?
+    var collectionViewFlowLayout = UICollectionViewFlowLayout()
+    
     //MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -35,6 +38,14 @@ class MapVC: UIViewController {
         locationManager.delegate = self
         configureLocationServices()
         addDoubleTap()
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewFlowLayout)
+        collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        
+        pullUpView.addSubview(collectionView!)
     }
 
     //MARK: - IBActions
@@ -86,7 +97,7 @@ class MapVC: UIViewController {
         spinner?.activityIndicatorViewStyle = .whiteLarge
         spinner?.color = #colorLiteral(red: 0.3230867386, green: 0.3421254754, blue: 0.3874129653, alpha: 1)
         spinner?.startAnimating()
-        pullUpView.addSubview(spinner!)
+        collectionView?.addSubview(spinner!)
     }
     
     //MARK: - Add Progress Label
@@ -98,7 +109,7 @@ class MapVC: UIViewController {
         progressLbl?.textAlignment = .center
         progressLbl?.text = "12/40 Photos Loading..."
         
-        pullUpView.addSubview(progressLbl!)
+        collectionView?.addSubview(progressLbl!)
     }
     
     //MARK: - Remove Progress Label
@@ -194,6 +205,27 @@ extension MapVC: UIGestureRecognizerDelegate {
     
 }
 
+//MARK: - UICollectionViewDataSource
+extension MapVC: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //number of items in array
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        return cell
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension MapVC: UICollectionViewDelegate {
+    
+}
 
 
 
