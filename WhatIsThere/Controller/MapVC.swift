@@ -48,7 +48,7 @@ class MapVC: UIViewController {
         collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        collectionView?.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         
         pullUpView.addSubview(collectionView!)
     }
@@ -207,6 +207,10 @@ extension MapVC: MKMapViewDelegate {
         removeSpinner()
         removeProgressLabel()
         
+        imageUrlArray = []
+        imagesArray = []
+        collectionView?.reloadData()
+        
         animateViewUp()
         addSwipe()
         addSpiner()
@@ -230,7 +234,7 @@ extension MapVC: MKMapViewDelegate {
                         //hide label
                         self.removeProgressLabel()
                         // TODO: TODO reload collectionView
-                        
+                        self.collectionView?.reloadData()
                         
                     }
                 })
@@ -280,11 +284,12 @@ extension MapVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //number of items in array
-        return 4
+        return imagesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
+        cell.imageView.image = imagesArray[indexPath.row]
         return cell
     }
 }
