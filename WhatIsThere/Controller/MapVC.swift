@@ -65,7 +65,7 @@ class MapVC: UIViewController {
     //MARK: - Add TapGestureRecognizer to MapView
     func addDoubleTap() {
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender:)))
-        doubleTap.numberOfTapsRequired = 2
+        doubleTap.numberOfTapsRequired = 1
         doubleTap.delegate = self
         mapView.addGestureRecognizer(doubleTap)
     }
