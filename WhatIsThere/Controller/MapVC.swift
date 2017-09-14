@@ -60,6 +60,21 @@ class MapVC: UIViewController {
         
     }
     
+    //MARK: - Close PopUpView by swiping down
+    func addSwipe() {
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(animateViewDown))
+        swipe.direction = .down
+        pullUpView.addGestureRecognizer(swipe)
+    }
+    
+    //MARK: - Animate PopUpView Down
+    @objc func animateViewDown() {
+        pullUpViewHeightConstraint.constant = 0
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
 }
 
 //MARK: - MKMapViewDelegate
@@ -89,6 +104,7 @@ extension MapVC: MKMapViewDelegate {
         
         removePin()
         animateViewUp()
+        addSwipe()
         
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
