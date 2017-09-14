@@ -24,6 +24,9 @@ class MapVC: UIViewController {
     let authorizationStatus = CLLocationManager.authorizationStatus()
     let regionRadius: Double = 1_000
     
+    var spinner: UIActivityIndicatorView?
+    var progressLbl: UILabel?
+    
     //MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -75,6 +78,17 @@ class MapVC: UIViewController {
         }
     }
     
+    //MARK: - Spinner Add
+    func addSpiner() {
+        
+        spinner = UIActivityIndicatorView()
+        spinner?.center = CGPoint(x: pullUpView.bounds.width / 2 - spinner!.frame.width / 2, y: pullUpView.bounds.height / 2)
+        spinner?.activityIndicatorViewStyle = .whiteLarge
+        spinner?.color = #colorLiteral(red: 0.3230867386, green: 0.3421254754, blue: 0.3874129653, alpha: 1)
+        spinner?.startAnimating()
+        pullUpView.addSubview(spinner!)
+    }
+    
 }
 
 //MARK: - MKMapViewDelegate
@@ -105,6 +119,7 @@ extension MapVC: MKMapViewDelegate {
         removePin()
         animateViewUp()
         addSwipe()
+        addSpiner()
         
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
