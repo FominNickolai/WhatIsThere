@@ -13,6 +13,7 @@
 		B78F9A7A1F69B98600F4FEA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78F9A781F69B98600F4FEA9 /* Main.storyboard */; };
 		B78F9A7C1F69B98600F4FEA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78F9A7B1F69B98600F4FEA9 /* Assets.xcassets */; };
 		B78F9A7F1F69B98600F4FEA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78F9A7D1F69B98600F4FEA9 /* LaunchScreen.storyboard */; };
+		B78F9A8D1F6A476900F4FEA9 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78F9A8C1F6A476900F4FEA9 /* DroppablePin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B78F9A7B1F69B98600F4FEA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B78F9A7E1F69B98600F4FEA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B78F9A801F69B98600F4FEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78F9A8C1F6A476900F4FEA9 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		FE167A5CBB6B5871AF974DF6 /* Pods-WhatIsThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatIsThere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatIsThere/Pods-WhatIsThere.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		B78F9A871F69B9FC00F4FEA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B78F9A8C1F6A476900F4FEA9 /* DroppablePin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78F9A771F69B98600F4FEA9 /* MapVC.swift in Sources */,
+				B78F9A8D1F6A476900F4FEA9 /* DroppablePin.swift in Sources */,
 				B78F9A751F69B98600F4FEA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
