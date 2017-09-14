@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSR-Sb-I38">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="596"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="y8O-0o-4PN"/>
                                 </connections>
@@ -48,7 +48,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-MJ-L2w">
-                                <rect key="frame" x="292" y="580" width="67" height="67"/>
+                                <rect key="frame" x="292" y="579" width="67" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="VRY-e4-Dff"/>
                                     <constraint firstAttribute="width" constant="67" id="heZ-8Q-0fX"/>
@@ -59,21 +59,23 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOQ-pK-9bv">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="666" width="375" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="wPR-jW-eXI"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IOQ-pK-9bv" secondAttribute="bottom" id="3ur-cv-6Kx"/>
                             <constraint firstItem="Ozw-RY-rgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="74e-xD-HZo"/>
                             <constraint firstItem="RSR-Sb-I38" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9qN-Qi-MPA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XYG-MJ-L2w" secondAttribute="trailing" constant="16" id="Bth-u8-g8n"/>
-                            <constraint firstItem="RSR-Sb-I38" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DVo-QX-Baq"/>
-                            <constraint firstItem="RSR-Sb-I38" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FO1-Dx-QOK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IOQ-pK-9bv" secondAttribute="bottom" id="Fmh-0t-mrf"/>
                             <constraint firstAttribute="trailing" secondItem="IOQ-pK-9bv" secondAttribute="trailing" id="LzC-Op-z3r"/>
+                            <constraint firstItem="RSR-Sb-I38" firstAttribute="top" secondItem="Ozw-RY-rgc" secondAttribute="bottom" id="RPk-aD-tTS"/>
                             <constraint firstItem="IOQ-pK-9bv" firstAttribute="top" secondItem="RSR-Sb-I38" secondAttribute="bottom" id="Wnq-or-loy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XYG-MJ-L2w" secondAttribute="bottom" constant="20" id="ZKX-5m-GHb"/>
+                            <constraint firstItem="IOQ-pK-9bv" firstAttribute="top" secondItem="XYG-MJ-L2w" secondAttribute="bottom" constant="20" id="ZKX-5m-GHb"/>
                             <constraint firstItem="IOQ-pK-9bv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZNe-mS-ZZQ"/>
                             <constraint firstItem="Ozw-RY-rgc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tXM-9p-Yct"/>
                             <constraint firstItem="RSR-Sb-I38" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vGM-JJ-cAI"/>
@@ -83,6 +85,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="RSR-Sb-I38" id="Jr0-si-KtM"/>
+                        <outlet property="pullUpView" destination="IOQ-pK-9bv" id="5DC-VY-Cyn"/>
+                        <outlet property="pullUpViewHeightConstraint" destination="wPR-jW-eXI" id="S9C-gQ-8Q1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
